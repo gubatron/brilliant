@@ -17,8 +17,11 @@ Miami, FL
 About Brilliant
 ===============
 
-Most of the world's most high aptitude students are not privileged with the resources and opportunities necessary to reach their full potential. Brilliant.org provides a challenging intellectual environment to anyone with internet access and a passion for mathematics or physics. Brilliant.org aims to become a hub of the world's most promising minds, where motivated thinkers can connect to each other and to opportunities to apply their talents.
+Most of the world's most high aptitude students are not privileged with the resources and opportunities necessary to reach their full potential. Brilliant.org provides a challenging intellectual environment to anyone with internet access and a passion for mathematics or physics. 
 
-Our weekly olympiad-style challenges offer rigorous, competitive, whimsical, and edifying problem sets in math and physics. We hope that the extracurricular flavor of these questions will allow many people to discover problem solving in a new light.
+Brilliant.org aims to become a hub of the world's most promising minds, where motivated thinkers can connect to each other and to opportunities to apply their talents.
+
+The weekly olympiad-style challenges offer rigorous, competitive, whimsical, and edifying problem sets in math and physics. We hope that the extracurricular flavor of these questions will allow many people to discover problem solving in a new light.
 
 We welcome thinkers of all types and ages to create an account and join our community of problem solvers. To learn more about Brilliant's mission, watch CEO Sue Khim's TEDx talk.
+http://www.youtube.com/watch?v=EnQCYZ8Oz8Q
