@@ -6,7 +6,7 @@
     //to brilliant's comments.
 
     double factorial(int n) {
-        int result = 1;
+        double result = 1;
         if (n > 1) {
             result = n * factorial(n-1);
         }
