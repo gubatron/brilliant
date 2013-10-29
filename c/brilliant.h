@@ -3,6 +3,7 @@
 
 double factorial(int n);
 double combinations(int n, int k);
+double permutations(int n, int k);
 
 //greatest common divisor
 int gcd(int a, int b);

@@ -17,6 +17,10 @@
         return factorial(n) / (factorial(k) * (factorial(n-k)));
     }
 
+    double permutations(int n, int k) {
+        return factorial(n) / factorial(n-k);
+    }
+
     int gcd(int a, int b) {
       int c;
       while (a!=0) {
