@@ -9,6 +9,7 @@ void testsumdigits();
 
 //greatest common divisor
 int gcd(int a, int b);
+int gcd_knuth(int a, int b);
 int gcd3(int a, int b, int c);
 
 int coprime(int a, int b);

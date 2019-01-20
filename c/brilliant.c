@@ -4,6 +4,9 @@
 #define true 1
 #define false 0
 
+// gcc -O -c brilliant.c -> brilliant.o
+// gcc brilliant.o <your.c> -o <your_executable>
+
 //4 spaces on the left are intentional so you can copy and paste
 //to brilliant's comments.
 
@@ -25,15 +28,6 @@ long sumdigits(long n) {
   return sum;
 }
 
-void testsumdigits() {
-  long result = sumdigits(11111111115l);
-  if (15 == result) {
-    printf("sumdigits OK! (%ld)\n",result);
-  } else {
-    printf("sumdigits KO! %ld\n",result);
-  }
-}
-
 double combinations(int n, int k) {
   return factorial(n) / (factorial(k) * (factorial(n-k)));
 }
@@ -42,14 +36,34 @@ double permutations(int n, int k) {
   return factorial(n) / factorial(n-k);
 }
 
-int gcd(int a, int b) {
-  int c;
-  while (a!=0) {
-    c=a; 
-    a=b%a;  
-    b=c;
+int gcd(int n, int m) {
+  int r;
+  while (n != 0) {
+    r = n; 
+    n = m % n;  
+    m = r;
   }
-  return b;
+  return m;
+}
+
+// slower than gcd
+int gcd_knuth(int m, int n) {
+  if (m < n) {
+    int t = m;
+    m = n;
+    n = t;
+  }
+
+  int r=-1;
+  do {
+    r = m % n;
+    if (r == 0) {
+      return n;
+    }
+    m = n;
+    n = r;
+  } while (r != 0);
+  return 1;
 }
 
 int gcd3(int a, int b, int c) {
