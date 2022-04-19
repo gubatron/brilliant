@@ -7,9 +7,7 @@ identity_rows = [0, 1, 2, 3, 4, 5, 6, 7]
 
 def queens_attack_each_other(queen_a, queen_b):
     '''True if 2 queens face each other'''
-    if queen_a[0] == queen_b[0] or queen_a[1] == queen_b[1]:
-        return True
-    return abs(queen_a[0] - queen_b[0]) == abs(queen_a[1] - queen_b[1])
+    return queen_a[0] == queen_b[0] or queen_a[1] == queen_b[1] or abs(queen_a[0] - queen_b[0]) == abs(queen_a[1] - queen_b[1])
 
 
 def solution_found(state):
@@ -51,5 +49,3 @@ if __name__ == '__main__':
                 f'Solution {len(solutions_found)}. {generated_states} random states generated.')
             print(s)
             print()
-        if len(solutions_found) >= 92:
-            break
