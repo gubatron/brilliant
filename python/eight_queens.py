@@ -1,7 +1,9 @@
-from random import randint
+from random import shuffle
 '''
 This module tries to solve the 8 queens problem.
 '''
+
+identity_rows = [0, 1, 2, 3, 4, 5, 6, 7]
 
 
 def queens_attack_each_other(queen_a, queen_b):
@@ -27,29 +29,27 @@ def count_collision(state):
 
 def generate_random_state():
     '''Generates a random state'''
+    unsorted_rows = identity_rows.copy()
+    shuffle(unsorted_rows)
     state = []
     for i in range(8):
-        state.append([i, randint(0, 7)])
+        state.append([i, unsorted_rows.pop()])
     return state
 
 
-def generate_states():
-    '''Generates N possible states'''
-    states = []
-    for x in range(2000000):
-        states.append(generate_random_state())
-    return states
-
-
 if __name__ == '__main__':
-    print('Generating states...')
-    states = generate_states()
-    print(f'Done generating {len(states)} states')
-
+    solutions_found = []
+    generated_states = 0
     print('Searching for solution...')
-    for s in states:
+    while len(solutions_found) < 92:
+        s = generate_random_state()
+        generated_states += 1
         hits = count_collision(s)
-        if hits == 0:
-            print('Solution found!')
+        if hits == 0 and s not in solutions_found:
+            solutions_found.append(s)
+            print(
+                f'Solution found! Total Solutions Found: {len(solutions_found)} out of {generated_states} random states generated.')
             print(s)
             print()
+        if len(solutions_found) >= 92:
+            break
