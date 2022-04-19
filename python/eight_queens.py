@@ -2,7 +2,6 @@ from random import shuffle
 '''
 This module tries to solve the 8 queens problem.
 '''
-
 identity_rows = [0, 1, 2, 3, 4, 5, 6, 7]
 
 
@@ -17,13 +16,15 @@ def solution_found(state):
     return count_collision(state) == 0
 
 
-def count_collision(state):
+def count_collision(state, breakOnFirstCollision=True):
     '''Checks current queens, if one attacks another it returns False'''
     hits = 0
     for queen_a in state:
         for queen_b in state:
             if queen_a != queen_b and queens_attack_each_other(queen_a, queen_b):
                 hits += 1
+                if breakOnFirstCollision:
+                    return hits
     return hits
 
 
