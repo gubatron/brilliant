@@ -48,7 +48,7 @@ if __name__ == '__main__':
         if hits == 0 and s not in solutions_found:
             solutions_found.append(s)
             print(
-                f'Solution found! Total Solutions Found: {len(solutions_found)} out of {generated_states} random states generated.')
+                f'Solution {len(solutions_found)}. {generated_states} random states generated.')
             print(s)
             print()
         if len(solutions_found) >= 92:
