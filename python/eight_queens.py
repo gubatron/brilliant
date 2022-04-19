@@ -45,8 +45,7 @@ if __name__ == '__main__':
     while len(solutions_found) < 92:
         s = generate_random_state()
         generated_states += 1
-        hits = count_collision(s)
-        if hits == 0 and s not in solutions_found:
+        if solution_found(s) and s not in solutions_found:
             solutions_found.append(s)
             print(
                 f'Solution {len(solutions_found)}. {generated_states} random states generated.')
